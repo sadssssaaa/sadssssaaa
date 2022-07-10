@@ -1,0 +1,15 @@
+a=int(input("birinci sayıyı girin"))
+b=int(input("ikinci sayıyı girin"))
+EBOB=1
+for i in range(2,max(a,b)):
+    if a%i==0 and b%i==0:
+        EBOB=EBOB*i
+        i=i
+        if a%i==0:
+            a=a/i
+        if b%i==0:
+            b=b/i
+
+    else:
+        i=i+1
+print(EBOB)
